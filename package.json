@@ -44,11 +44,13 @@
     "README.md",
     "LICENSE"
   ],
+  "workspaces": ["demo"],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "demo": "npm -w demo run dev"
   },
   "peerDependencies": {
     "hls.js": "^1.4.0",
@@ -92,6 +94,8 @@
     "mapbox-gl": "^3.9.0",
     "maplibre-gl": "^4.0.0",
     "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "@types/react-dom": "^18.0.0",
     "react-map-gl": "^7.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.5.0"
