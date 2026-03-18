@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Map from 'react-map-gl/maplibre';
-import type { MapRef } from 'react-map-gl/maplibre';
 import { useHlsLayerMapLibre } from 'hls-streaming-layer/react-maplibre';
 import type { DemoProps } from '../App';
 
@@ -22,31 +21,14 @@ function HlsOverlay({ hlsUrl }: { hlsUrl: string }) {
 }
 
 /**
- * MapLibre GL globe projection demo with an HLS raster overlay.
- * Requires MapLibre GL JS v3+.
+ * MapLibre GL perspective demo with an HLS raster overlay.
  */
 export default function MaplibreGlobe({ hlsUrl }: DemoProps) {
-  const mapRef = useRef<MapRef>(null);
-
-  useEffect(() => {
-    const map = mapRef.current?.getMap();
-    if (!map) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (map as any).setProjection({ type: 'globe' });
-  }, []);
-
   return (
     <Map
-      ref={mapRef}
-      initialViewState={{ longitude: 0, latitude: 20, zoom: 1.5 }}
+      initialViewState={{ longitude: 0, latitude: 20, zoom: 1.5, pitch: 45, bearing: -10 }}
       style={{ width: '100%', height: '100%' }}
       mapStyle="https://demotiles.maplibre.org/style.json"
-      onLoad={() => {
-        const map = mapRef.current?.getMap();
-        if (!map) return;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (map as any).setProjection({ type: 'globe' });
-      }}
     >
       <HlsOverlay hlsUrl={hlsUrl} />
     </Map>

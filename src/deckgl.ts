@@ -184,8 +184,10 @@ export function createHlsDeckLayer(options: HlsDeckLayerOptions): HlsDeckLayerHa
       if (rafId !== null) return;
       function tick() {
         if (destroyed) return;
-        frame++;
-        onUpdate(makeLayer());
+        if (videoEl.readyState >= 2) {
+          frame++;
+          onUpdate(makeLayer());
+        }
         rafId = requestAnimationFrame(tick);
       }
       rafId = requestAnimationFrame(tick);

@@ -11,7 +11,7 @@ const TABS = [
   { id: 'mapbox-2d',       label: 'Mapbox 2D',       needsToken: true  },
   { id: 'mapbox-globe',    label: 'Mapbox Globe',    needsToken: true  },
   { id: 'maplibre-2d',     label: 'MapLibre 2D',     needsToken: false },
-  { id: 'maplibre-globe',  label: 'MapLibre Globe',  needsToken: false },
+  { id: 'maplibre-globe',  label: 'MapLibre 3D',     needsToken: false },
   { id: 'deckgl-2d',       label: 'deck.gl 2D',      needsToken: false },
   { id: 'deckgl-globe',    label: 'deck.gl Globe',   needsToken: false },
 ] as const;
@@ -25,7 +25,7 @@ const s: Record<string, React.CSSProperties> = {
   input:   { flex: 1, background: '#0d1117', border: '1px solid #30363d', borderRadius: 6, padding: '5px 10px', color: '#e6edf3', fontSize: 13, outline: 'none', minWidth: 0 },
   tabs:    { display: 'flex', gap: 2, padding: '0 16px', background: '#0d1117', borderBottom: '1px solid #30363d', flexShrink: 0 },
   tab:     { padding: '8px 14px', fontSize: 13, cursor: 'pointer', border: 'none', background: 'transparent', color: '#8b949e', borderBottom: '2px solid transparent', transition: 'color .15s' },
-  tabActive: { color: '#e6edf3', borderBottomColor: '#1f6feb' },
+  tabActive: { color: '#e6edf3', borderBottom: '2px solid #1f6feb' },
   content: { flex: 1, position: 'relative', overflow: 'hidden' },
   empty:   { display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#8b949e', fontSize: 14 },
 };
