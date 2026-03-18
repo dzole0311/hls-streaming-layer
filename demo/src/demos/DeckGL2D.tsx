@@ -1,7 +1,8 @@
 import React from 'react';
 import DeckGL from '@deck.gl/react';
 import { MapView } from '@deck.gl/core';
-import { useHlsDeckLayer, WORLD_BOUNDS_DECK } from 'hls-streaming-layer/react-deckgl';
+import { useHlsDeckLayer } from 'hls-streaming-layer/react-deckgl';
+import { WORLD_BOUNDS_DECK } from 'hls-streaming-layer/deckgl';
 import type { DemoProps } from '../App';
 
 /**
