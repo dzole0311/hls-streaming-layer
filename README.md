@@ -55,7 +55,7 @@ const deck = new Deck({ views: new GlobeView() });
 
 const handle = createHlsDeckLayer({
   url: 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/live/playlist.m3u8',
-  bounds: [-180, -90, 180, 90],
+  bounds: [-180, -85, 180, 85],
   onLoad: () => {
     handle.startAnimation((layer) => deck.setProps({ layers: [layer] }));
   },
@@ -105,7 +105,7 @@ import { useHlsDeckLayer } from 'hls-streaming-layer/react-deckgl';
 export default function App() {
   const { layer } = useHlsDeckLayer({
     url: 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/live/playlist.m3u8',
-    bounds: [-180, -90, 180, 90],
+    bounds: [-180, -85, 180, 85],
   });
 
   return (
