@@ -13,7 +13,7 @@ import { useHlsDeckLayer, WORLD_BOUNDS_DECK } from 'hls-streaming-layer/react-de
 export default function App() {
   const { layer, isLoaded, error } = useHlsDeckLayer({
     id: 'hls-3d',
-    url: 'https://example.com/stream/playlist.m3u8',
+    url: 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/live/playlist.m3u8',
     bounds: WORLD_BOUNDS_DECK,
     opacity: 0.85,
   });

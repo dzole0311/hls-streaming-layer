@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Map from 'react-map-gl/mapbox';
 import { useHlsLayer } from 'hls-streaming-layer/react';
 
-const STREAM_A = 'https://example.com/stream-a/playlist.m3u8';
-const STREAM_B = 'https://example.com/stream-b/playlist.m3u8';
+const STREAM_A = 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/stream-a/playlist.m3u8';
+const STREAM_B = 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/stream-b/playlist.m3u8';
 
 /**
  * Inner component that must render inside `<Map>` so `useHlsLayer` has access

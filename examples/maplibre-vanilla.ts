@@ -18,7 +18,7 @@ const map = new maplibregl.Map({
 map.on('load', () => {
   const layer = addHlsLayerMapLibre(map, {
     id: 'weather',
-    url: 'https://example.com/weather/playlist.m3u8',
+    url: 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/weather/playlist.m3u8',
     coordinates: WORLD_COORDINATES,
     paint: {
       'raster-opacity': 0.75,
@@ -34,7 +34,7 @@ map.on('load', () => {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 's') {
-      layer.setUrl('https://example.com/weather-alt/playlist.m3u8');
+      layer.setUrl('https://my-bucket.s3.us-east-1.amazonaws.com/streams/weather-alt/playlist.m3u8');
     }
     if (e.key === 'd') {
       layer.destroy();

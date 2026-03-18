@@ -23,7 +23,7 @@ const deck = new Deck({
 
 const handle = createHlsDeckLayer({
   id: 'hls-3d',
-  url: 'https://example.com/stream/playlist.m3u8',
+  url: 'https://my-bucket.s3.us-east-1.amazonaws.com/streams/live/playlist.m3u8',
   bounds: WORLD_BOUNDS_DECK,
   opacity: 0.85,
   onLoad: (video) => {
@@ -40,7 +40,7 @@ const handle = createHlsDeckLayer({
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 's') {
-    handle.setUrl('https://example.com/stream-alt/playlist.m3u8');
+    handle.setUrl('https://my-bucket.s3.us-east-1.amazonaws.com/streams/live-alt/playlist.m3u8');
   }
   if (e.key === 'd') {
     handle.stopAnimation();
