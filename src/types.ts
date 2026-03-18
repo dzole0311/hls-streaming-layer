@@ -18,10 +18,10 @@ export type Coordinates = [
  * Use this when you want the video to span the entire map.
  */
 export const WORLD_COORDINATES: Coordinates = [
-  [-180, 85],
-  [180, 85],
-  [180, -85],
-  [-180, -85],
+  [-180, 90],
+  [180, 90],
+  [180, -90],
+  [-180, -90],
 ];
 
 /**

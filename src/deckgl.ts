@@ -6,7 +6,7 @@ import type { Coordinates } from './types';
 /**
  * Full world bounds for deck.gl BitmapLayer as [west, south, east, north].
  */
-export const WORLD_BOUNDS_DECK: [number, number, number, number] = [-180, -85, 180, 85];
+export const WORLD_BOUNDS_DECK: [number, number, number, number] = [-180, -90, 180, 90];
 
 /**
  * Bounds for a deck.gl BitmapLayer.
