@@ -184,7 +184,7 @@ export function createHlsDeckLayer(options: HlsDeckLayerOptions): HlsDeckLayerHa
       if (rafId !== null) return;
       function tick() {
         if (destroyed) return;
-        if (videoEl.readyState >= 2) {
+        if (videoEl.videoWidth > 0) {
           frame++;
           onUpdate(makeLayer());
         }

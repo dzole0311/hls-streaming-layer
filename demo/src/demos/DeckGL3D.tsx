@@ -1,6 +1,6 @@
 import React from 'react';
 import DeckGL from '@deck.gl/react';
-import { GlobeView } from '@deck.gl/core';
+import { _GlobeView as GlobeView } from '@deck.gl/core';
 import { useHlsDeckLayer } from 'hls-streaming-layer/react-deckgl';
 import { WORLD_BOUNDS_DECK } from 'hls-streaming-layer/deckgl';
 import type { DemoProps } from '../App';

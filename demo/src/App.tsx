@@ -11,7 +11,7 @@ const TABS = [
   { id: 'mapbox-2d',       label: 'Mapbox 2D',       needsToken: true  },
   { id: 'mapbox-globe',    label: 'Mapbox Globe',    needsToken: true  },
   { id: 'maplibre-2d',     label: 'MapLibre 2D',     needsToken: false },
-  { id: 'maplibre-globe',  label: 'MapLibre 3D',     needsToken: false },
+  { id: 'maplibre-globe',  label: 'MapLibre Globe',  needsToken: false },
   { id: 'deckgl-2d',       label: 'deck.gl 2D',      needsToken: false },
   { id: 'deckgl-globe',    label: 'deck.gl Globe',   needsToken: false },
 ] as const;

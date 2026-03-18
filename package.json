@@ -44,7 +44,9 @@
     "README.md",
     "LICENSE"
   ],
-  "workspaces": ["demo"],
+  "workspaces": [
+    "demo"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -53,13 +55,13 @@
     "demo": "npm -w demo run dev"
   },
   "peerDependencies": {
-    "hls.js": "^1.4.0",
-    "mapbox-gl": "^2.0.0 || ^3.0.0",
-    "maplibre-gl": "^3.0.0 || ^4.0.0",
     "@deck.gl/core": "^9.0.0",
     "@deck.gl/layers": "^9.0.0",
+    "hls.js": "^1.4.0",
+    "mapbox-gl": "^2.0.0 || ^3.0.0",
+    "maplibre-gl": "^3.0.0 || ^4.0.0 || ^5.0.0",
     "react": "^18.0.0 || ^19.0.0",
-    "react-map-gl": "^7.0.0"
+    "react-map-gl": "^7.0.0 || ^8.0.0"
   },
   "peerDependenciesMeta": {
     "hls.js": {
@@ -90,13 +92,13 @@
     "@deck.gl/react": "^9.0.0",
     "@types/mapbox-gl": "^3.4.1",
     "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "hls.js": "^1.5.0",
     "mapbox-gl": "^3.9.0",
-    "maplibre-gl": "^4.0.0",
+    "maplibre-gl": "^5.20.2",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "@types/react-dom": "^18.0.0",
-    "react-map-gl": "^7.0.0",
+    "react-map-gl": "^8.1.0",
     "tsup": "^8.0.0",
     "typescript": "^5.5.0"
   },
