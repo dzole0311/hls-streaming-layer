@@ -1,7 +1,7 @@
 {
   "name": "hls-streaming-layer",
   "version": "0.1.0",
-  "description": "Stream HLS video as a layer on Mapbox GL maps",
+  "description": "Stream HLS video as a layer on Mapbox GL, MapLibre GL, and deck.gl maps",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -13,10 +13,30 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./maplibre": {
+      "types": "./dist/maplibre.d.ts",
+      "import": "./dist/maplibre.js",
+      "require": "./dist/maplibre.cjs"
+    },
+    "./deckgl": {
+      "types": "./dist/deckgl.d.ts",
+      "import": "./dist/deckgl.js",
+      "require": "./dist/deckgl.cjs"
+    },
     "./react": {
       "types": "./dist/react.d.ts",
       "import": "./dist/react.js",
       "require": "./dist/react.cjs"
+    },
+    "./react-maplibre": {
+      "types": "./dist/react-maplibre.d.ts",
+      "import": "./dist/react-maplibre.js",
+      "require": "./dist/react-maplibre.cjs"
+    },
+    "./react-deckgl": {
+      "types": "./dist/react-deckgl.d.ts",
+      "import": "./dist/react-deckgl.js",
+      "require": "./dist/react-deckgl.cjs"
     }
   },
   "files": [
@@ -32,32 +52,63 @@
   },
   "peerDependencies": {
     "hls.js": "^1.4.0",
-    "mapbox-gl": "^2.0.0 || ^3.0.0"
+    "mapbox-gl": "^2.0.0 || ^3.0.0",
+    "maplibre-gl": "^3.0.0 || ^4.0.0",
+    "@deck.gl/core": "^9.0.0",
+    "@deck.gl/layers": "^9.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-map-gl": "^7.0.0"
   },
   "peerDependenciesMeta": {
     "hls.js": {
       "optional": false
+    },
+    "mapbox-gl": {
+      "optional": true
+    },
+    "maplibre-gl": {
+      "optional": true
+    },
+    "@deck.gl/core": {
+      "optional": true
+    },
+    "@deck.gl/layers": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-map-gl": {
+      "optional": true
     }
   },
   "devDependencies": {
+    "@deck.gl/core": "^9.0.0",
+    "@deck.gl/layers": "^9.0.0",
+    "@deck.gl/react": "^9.0.0",
     "@types/mapbox-gl": "^3.4.1",
+    "@types/react": "^18.0.0",
     "hls.js": "^1.5.0",
     "mapbox-gl": "^3.9.0",
-    "react": "^18.0.0 || ^19.0.0",
+    "maplibre-gl": "^4.0.0",
+    "react": "^18.3.0",
     "react-map-gl": "^7.0.0",
     "tsup": "^8.0.0",
-    "typescript": "^5.5.0",
-    "@types/react": "^18.0.0"
+    "typescript": "^5.5.0"
   },
   "keywords": [
     "mapbox",
+    "maplibre",
+    "deckgl",
+    "deck.gl",
     "hls",
     "video",
     "streaming",
     "map",
     "layer",
     "satellite",
-    "overlay"
+    "overlay",
+    "globe"
   ],
   "repository": {
     "type": "git",
